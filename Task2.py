@@ -40,6 +40,13 @@ SecondsCount = int(InputTime % 60)
 
 if MinutesCount > 60:
     HoursCount = (MinutesCount // 60)
-    MinutesCount  = MinutesCount % 60;
+    MinutesCount  = MinutesCount % 60
+else:
+    HoursCount = 0
+    MinutesCount = int(InputTime / 60)
+    SecondsCount = int(InputTime % 60);
 
-print (HoursCount,':',MinutesCount,':',SecondsCount)
+if InputTime < 60:
+    print(00, ':', 00, ':', InputTime)
+else:
+    print (HoursCount,':',MinutesCount,':',SecondsCount);
